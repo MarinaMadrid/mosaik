@@ -85,7 +85,24 @@ main {
 
 img {
     width: 100%;
-    height: auto;
     display: block;
     border-radius: 10px;
 }
+
+/*Columnas impares*/
+/*.column:nth-of-type(odd) figure:nth-child(odd) img {
+    height: 150px; 
+}
+
+.column:nth-of-type(odd) figure:nth-child(even) img {
+    height: 300px; 
+}*/
+
+/*Columnas pares*/
+/*.column:nth-of-type(even) figure:nth-child(odd) img {
+    height: 300px; 
+}
+
+.column:nth-of-type(even) figure:nth-child(even) img {
+    height: 150px; 
+}*/
