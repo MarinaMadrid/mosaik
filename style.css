@@ -10,7 +10,6 @@
 
 html, body {
     height: 100%; 
-    overflow: hidden;
 }
 
 .flex-jc-center {
@@ -66,7 +65,7 @@ header span {
 }
 
 main {
-    margin-top: 30em; 
+    height: 100%;
 }
 
 .photo-gallery {
@@ -83,25 +82,25 @@ main {
 }
 
 img {
-    width: 100%;
+    width: 28em;
     display: block;
     border-radius: 10px;
 }
 
 /*Columnas impares*/
-/*.column:nth-of-type(odd) figure:nth-child(odd) img {
-    height: 150px; 
+.column:nth-of-type(odd) figure:nth-child(odd) img {
+    height: 20em; 
 }
 
 .column:nth-of-type(odd) figure:nth-child(even) img {
-    height: 300px; 
-}*/
+    height: 40em;
+}
 
 /*Columnas pares*/
-/*.column:nth-of-type(even) figure:nth-child(odd) img {
-    height: 300px; 
+.column:nth-of-type(even) figure:nth-child(odd) img {
+    height: 40em;
 }
 
 .column:nth-of-type(even) figure:nth-child(even) img {
-    height: 150px; 
-}*/
+    height: 20em; 
+}
