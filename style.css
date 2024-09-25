@@ -10,7 +10,8 @@
 
 html, body {
     height: 100%; 
-  }
+    overflow: hidden;
+}
 
 .flex-jc-center {
     display: flex;
@@ -19,14 +20,24 @@ html, body {
     text-align: center;
 }
 
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 body {
     color: white;
 }
 
-header {
+.circle {
     flex-direction: column;
     background-color: coral;
-    border: 1px solid white;
+    border: 15px solid white;
     border-radius: 50%;
     width: 30em;
     height: 30em;
@@ -53,3 +64,27 @@ header span {
     color: coral;
 }
 
+main {
+    margin-top: 30em; 
+    overflow-y: scroll; 
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
