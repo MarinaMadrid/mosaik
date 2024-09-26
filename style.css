@@ -21,7 +21,7 @@ html, body {
 
 header {
     background-color: rgba(255, 255, 255, 0.5);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -73,6 +73,7 @@ main {
     justify-content: center;
     gap: 1em;
     padding: 1em;
+    width: 100%;
 }
 
 .column {
@@ -81,10 +82,20 @@ main {
     gap: 1em;
 }
 
+figure {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 img {
     width: 28em;
     display: block;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1); 
 }
 
 /*Columnas impares*/
@@ -103,4 +114,11 @@ img {
 
 .column:nth-of-type(even) figure:nth-child(even) img {
     height: 20em; 
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
 }
