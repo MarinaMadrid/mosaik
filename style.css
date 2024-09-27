@@ -88,7 +88,8 @@ figure {
 }
 
 img {
-    width: 28em;
+    width: 100%; 
+    height: auto; 
     display: block;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
@@ -98,38 +99,32 @@ img:hover {
     transform: scale(1.1); 
 }
 
-/*Columnas impares*/
-.column:nth-of-type(odd) figure:nth-child(odd) img {
-    height: 20em; 
-}
-
-.column:nth-of-type(odd) figure:nth-child(even) img {
-    height: 40em;
-}
-
-/*Columnas pares*/
-.column:nth-of-type(even) figure:nth-child(odd) img {
-    height: 40em;
-}
-
-.column:nth-of-type(even) figure:nth-child(even) img {
-    height: 20em; 
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .photo-gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr; 
     }
-}
 
-@media (max-width: 992px) {
-    .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
+    .column:nth-child(odd) {
+        display: grid;
+        grid-template-columns: 1fr; 
     }
-}
 
-@media (max-width: 600px) {
-    .photo-gallery {
+    .column:nth-child(odd) figure:nth-child(odd) {
+        grid-column: 1 / -1; 
+    }
+
+    .column:nth-child(even) {
+        display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .column:nth-child(even) figure:nth-child(even) {
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
